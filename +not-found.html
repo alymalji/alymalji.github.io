@@ -3,6 +3,14 @@ html, body, #root {
   background-color: #0A0B0D;
   color-scheme: dark;
 }
+
+/* Marked by the tab bar with a safeBottom dataSet entry. max() keeps the
+   10px floor on a device with no home indicator, where env() resolves to 0.
+   The !important is because react-native-web writes the JS value inline. */
+[data-safe-bottom] {
+  padding-bottom: 10px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom)) !important;
+}
 </style><style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
@@ -418,5 +426,5 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @keyframes r-1pzkwqh{0%{transform:translateY(100%);}100%{transform:translateY(0%);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-q67da2{0%{transform:translateX(-100%);}100%{transform:translateX(400%);}}
-@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script><link rel="icon" href="/favicon.ico" /></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"></div></div><script src="/_expo/static/js/web/entry-1c8ff9fcbd2d1a1ac5bc717c39103348.js" defer></script>
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script><link rel="icon" href="/favicon.ico" /></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"></div></div><script src="/_expo/static/js/web/entry-69b703d84ea5d806f246e307f5c95769.js" defer></script>
 </body></html>
