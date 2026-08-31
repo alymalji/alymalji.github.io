@@ -3,7 +3,20 @@ html, body, #root {
   background-color: #0A0B0D;
   color-scheme: dark;
 }
-</style><style id="react-native-stylesheet">[stylesheet-group="0"]{}
+</style><script>
+try {
+  var u = new URL(window.location.href);
+  if (u.searchParams.has("v")) {
+    u.searchParams.delete("v");
+    var q = u.searchParams.toString();
+    window.history.replaceState(
+      window.history.state,
+      '',
+      u.pathname + (q ? '?' + q : '') + u.hash
+    );
+  }
+} catch (e) {}
+</script><style id="react-native-stylesheet">[stylesheet-group="0"]{}
 body{margin:0;}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
@@ -35,7 +48,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-1uu6nss{padding:5px;}
 .r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
 .r-4a18lf{border-bottom-color:rgba(255,0,0,1.00);border-left-color:rgba(255,0,0,1.00);border-right-color:rgba(255,0,0,1.00);border-top-color:rgba(255,0,0,1.00);}
-.r-5b5qtb{border-bottom-color:rgba(30,91,255,1.00);border-left-color:rgba(30,91,255,1.00);border-right-color:rgba(30,91,255,1.00);border-top-color:rgba(30,91,255,1.00);}
 .r-60ke3l{border-bottom-color:rgba(0,128,0,1.00);border-left-color:rgba(0,128,0,1.00);border-right-color:rgba(0,128,0,1.00);border-top-color:rgba(0,128,0,1.00);}
 .r-6t2glc{border-bottom-left-radius:40px;border-bottom-right-radius:40px;border-top-left-radius:40px;border-top-right-radius:40px;}
 .r-78vmp4{border-bottom-left-radius:99px;border-bottom-right-radius:99px;border-top-left-radius:99px;border-top-right-radius:99px;}
@@ -46,7 +58,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-d23pfw{padding:24px;}
 .r-edyy15{padding:8px;}
 .r-fx7oqy{border-bottom-color:rgba(0,0,255,1.00);border-left-color:rgba(0,0,255,1.00);border-right-color:rgba(0,0,255,1.00);border-top-color:rgba(0,0,255,1.00);}
-.r-hwh8t1{margin:8px;}
 .r-j40yez{border-bottom-color:rgba(34,38,46,1.00);border-left-color:rgba(34,38,46,1.00);border-right-color:rgba(34,38,46,1.00);border-top-color:rgba(34,38,46,1.00);}
 .r-krxsd3{display:-webkit-box;}
 .r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
@@ -74,7 +85,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-284m6k{padding-left:18px;padding-right:18px;}
 .r-3o4zer{padding-left:12px;padding-right:12px;}
 .r-3pj75a{padding-left:16px;padding-right:16px;}
-.r-cnw61z{padding-bottom:4px;padding-top:4px;}
 .r-cxgwc0{padding-left:24px;padding-right:24px;}
 .r-f8sm7e{margin-left:auto;margin-right:auto;}
 .r-gu64tb{padding-left:14px;padding-right:14px;}
@@ -331,6 +341,7 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-eqz5dr{flex-direction:column;}
 .r-ero68b{min-height:40px;}
 .r-eu3ka{height:40px;}
+.r-ez24o0{border-bottom-color:rgba(20,58,158,1.00);}
 .r-fdjqy7{text-align:left;}
 .r-g2jc42{letter-spacing:1.2600000000000002px;}
 .r-g3mlsw{animation-name:r-t2lo5v;}
@@ -356,7 +367,6 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 .r-lpb231{height:168px;}
 .r-lrsllp{width:24px;}
 .r-lrvibr{-moz-user-select:none;-webkit-user-select:none;user-select:none;}
-.r-lsxu1a{max-height:74%;}
 .r-m5arl1{width:2px;}
 .r-m611by{padding-top:10px;}
 .r-majxgm{font-weight:500;}
@@ -422,5 +432,5 @@ input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-web
 @keyframes r-1pzkwqh{0%{transform:translateY(100%);}100%{transform:translateY(0%);}}
 @keyframes r-imtty0{0%{opacity:0;}100%{opacity:1;}}
 @keyframes r-q67da2{0%{transform:translateX(-100%);}100%{transform:translateX(400%);}}
-@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script><link rel="icon" href="/favicon.ico" /></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><!--/$--></div></div><script src="/_expo/static/js/web/entry-d81a38d9092601942ef06a2292efba29.js" defer></script>
+@keyframes r-t2lo5v{0%{opacity:1;}100%{opacity:0;}}</style><script type="module">globalThis.__EXPO_ROUTER_HYDRATE__=true;</script><link rel="icon" href="/favicon.ico" /></head><body><div id="root"><div class="css-g5y9jx r-13awgt0"><!--$--><!--/$--></div></div><script src="/_expo/static/js/web/entry-c446486e279c885c85281e579bda4799.js" defer></script>
 </body></html>
